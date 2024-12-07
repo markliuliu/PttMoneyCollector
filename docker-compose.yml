@@ -1,0 +1,8 @@
+version: "3.8"
+
+services:
+  PttMoneyCollector:
+    image: ptt_money_collector:1.0.3
+    volumes:
+      - ./log:/code/log
+    command: ./start_ptt_money_collector.sh --account $ACCOUNT --password $PASSWORD
